@@ -8,13 +8,37 @@
 </head>
 <body>
   <header>
-    <h1>Bem-vindo à nossa Crew!</h1>
-    <img src="assets/logo.png" alt="Logo da Crew">
+    <img src="assets/logo.png" alt="Logo da Crew" class="logo">
+    <h1>Bem-vindo à Crew Marinheiras Danadas!</h1>
+    <p>Farm de Infamy, PvE e eventos exclusivos!</p>
   </header>
 
   <main>
-    <p>Aqui você encontrará informações sobre a Crew, recompensas e eventos.</p>
+    <section class="leaderboard">
+      <h2>Top Membros da Crew</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Posição</th>
+            <th>Nome</th>
+            <th>Infamy</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboard-body">
+          <!-- Será preenchido pelo script.js -->
+        </tbody>
+      </table>
+    </section>
+
+    <section class="sobre">
+      <h2>Sobre a Crew</h2>
+      <p>Temos vários servidores privados, sorteios de frutas e itens raros, e muito PvE para farmar Infamy!</p>
+    </section>
   </main>
+
+  <footer>
+    <p>&copy; 2025 Crew Marinheiras Danadas</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
