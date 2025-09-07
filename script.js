@@ -1,10 +1,10 @@
-// Lista de membros e infamy (exemplo)
+// Lista de membros e infamy
 const members = [
-  { name: "MTPlays", infamy: 12000 },
-  { name: "Azazel", infamy: 9500 },
-  { name: "Yoru", infamy: 8700 },
-  { name: "Kira", infamy: 8200 },
-  { name: "Luna", infamy: 7800 }
+  { name: "Heron", infamy: 12000 },
+  { name: "Djplay34", infamy: 9500 },
+  { name: "Dokka", infamy: 8700 },
+  { name: "MTPlaysGes", infamy: 8200 },
+  { name: "TESTES", infamy: 7800 }
 ];
 
 const tbody = document.getElementById("leaderboard-body");

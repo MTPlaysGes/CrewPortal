@@ -6,40 +6,60 @@
   font-family: 'Arial', sans-serif;
 }
 
+/* Cores da crew */
+:root {
+  --azul: #3498db;
+  --azul-marinho: #1a1f36;
+  --branco: #ffffff;
+  --preto: #000000;
+}
+
 /* Body */
 body {
-  background: linear-gradient(135deg, #1a1a1a, #121212);
-  color: #fff;
+  background: var(--azul-marinho);
+  color: var(--branco);
   min-height: 100vh;
 }
 
 /* Header */
 header {
   text-align: center;
-  padding: 40px 20px;
-  background: #111;
-  border-bottom: 2px solid #f39c12;
+  padding: 20px;
 }
 
 header .logo {
   max-width: 150px;
+  margin-top: 20px;
+}
+
+/* Banner animado */
+.banner {
+  background: linear-gradient(90deg, var(--azul), var(--azul-marinho));
+  padding: 30px 20px;
+  border-radius: 10px;
+  animation: slideBanner 5s infinite alternate;
   margin-bottom: 20px;
 }
 
-header h1 {
+@keyframes slideBanner {
+  0% {background-position: 0%;}
+  100% {background-position: 100%;}
+}
+
+.banner h1 {
   font-size: 2.5rem;
-  color: #f39c12;
+  color: var(--branco);
   margin-bottom: 10px;
 }
 
-header p {
+.banner p {
   font-size: 1.1rem;
-  color: #ccc;
+  color: var(--branco);
 }
 
 /* Main */
 main {
-  padding: 40px 20px;
+  padding: 30px 20px;
 }
 
 /* Leaderboard */
@@ -51,7 +71,7 @@ main {
 .leaderboard h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #f39c12;
+  color: var(--azul);
 }
 
 table {
@@ -59,7 +79,7 @@ table {
   max-width: 600px;
   margin: 0 auto;
   border-collapse: collapse;
-  background: #222;
+  background: var(--preto);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -70,40 +90,85 @@ th, td {
 }
 
 th {
-  background: #333;
-  color: #f39c12;
+  background: var(--azul);
+  color: var(--branco);
 }
 
 td {
-  color: #fff;
+  color: var(--branco);
 }
 
 tbody tr:hover {
-  background: #333;
+  background: var(--azul-marinho);
+  cursor: pointer;
+}
+
+/* Medalha top 3 */
+td:first-child {
+  font-weight: bold;
+}
+
+tbody tr:nth-child(1) td:first-child::after {
+  content: " 🥇";
+}
+tbody tr:nth-child(2) td:first-child::after {
+  content: " 🥈";
+}
+tbody tr:nth-child(3) td:first-child::after {
+  content: " 🥉";
+}
+
+/* Eventos */
+.eventos h2 {
+  font-size: 2rem;
+  color: var(--azul);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: var(--azul);
+  color: var(--branco);
+  font-size: 1rem;
+  transition: transform 0.2s, background 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--azul-marinho);
+  transform: scale(1.1);
 }
 
 /* Sobre */
 .sobre h2 {
   font-size: 2rem;
   margin-bottom: 10px;
-  color: #f39c12;
+  color: var(--azul);
+  text-align: center;
 }
 
 .sobre p {
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
-  color: #ccc;
+  color: var(--branco);
+  text-align: center;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background: #111;
-  border-top: 2px solid #f39c12;
-  color: #ccc;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  background: var(--preto);
+  color: var(--branco);
 }
