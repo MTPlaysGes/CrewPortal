@@ -1,54 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crew Portal</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Crew Marinheiras Danadas — Portal</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div class="banner">
-      <h1>Bem-vindo à Crew Marinheiras Danadas!</h1>
-      <p>Farm de Infamy, PvE e eventos exclusivos!</p>
+    <div class="topbar">
+      <img src="assets/logo.png" alt="Logo Crew" class="logo" onerror="this.style.display='none'">
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#leaderboard">Leaderboard</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
     </div>
-    <img src="assets/logo.png" alt="Logo da Crew" class="logo">
+
+    <section class="hero" id="home" aria-label="Banner">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1>Marinheiras Danadas</h1>
+          <p class="subtitle">Farm de Infamy • PvE • Sorteios • Eventos</p>
+          <div class="rotator" aria-hidden="false"></div>
+          <div class="hero-cta">
+            <button class="btn primary" id="joinDiscord">Entrar no Discord</button>
+            <button class="btn" id="verLeader">Ver Leaderboard</button>
+          </div>
+        </div>
+      </div>
+    </section>
   </header>
 
   <main>
-    <section class="leaderboard">
+    <section class="leaderboard" id="leaderboard">
       <h2>Top Membros da Crew</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Posição</th>
-            <th>Nome</th>
-            <th>Infamy</th>
-          </tr>
-        </thead>
-        <tbody id="leaderboard-body">
-          <!-- Populado pelo script.js -->
-        </tbody>
-      </table>
+      <div class="table-wrap">
+        <table aria-label="Leaderboard">
+          <thead>
+            <tr>
+              <th>Pos</th>
+              <th>Nome</th>
+              <th>Infamy</th>
+            </tr>
+          </thead>
+          <tbody id="leaderboard-body">
+            <!-- preenchido por script -->
+          </tbody>
+        </table>
+      </div>
+      <p class="hint">Passe o mouse nos nomes para ver histórico / conquistas.</p>
     </section>
 
-    <section class="eventos">
+    <section class="eventos" id="eventos">
       <h2>Eventos & Sorteios</h2>
-      <div class="buttons">
-        <button class="btn">Sorteio de Frutas</button>
-        <button class="btn">PvE Especial</button>
-        <button class="btn">Nova Missão</button>
+      <div class="cards">
+        <article class="card">
+          <h3>Sorteio de Frutas</h3>
+          <p>Participe do sorteio semanal — prêmio: fruta rara.</p>
+          <div class="card-actions">
+            <button class="btn" data-action="sorteio">Participar</button>
+            <button class="btn ghost" data-action="detalhes">Detalhes</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>PvE Especial</h3>
+          <p>Evento de raid com bosses aumentados. Recompensas em Infamy.</p>
+          <div class="card-actions">
+            <button class="btn" data-action="pve">Inscrever</button>
+            <button class="btn ghost" data-action="detalhes">Detalhes</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Missão Semanal</h3>
+          <p>Complete 3 missões e ganhe bônus de XP e infamy.</p>
+          <div class="card-actions">
+            <button class="btn" data-action="missao">Começar</button>
+            <button class="btn ghost" data-action="detalhes">Detalhes</button>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="sobre">
+    <section class="sobre" id="sobre">
       <h2>Sobre a Crew</h2>
-      <p>Temos servidores privados, sorteios de frutas e itens raros, e muito PvE para farmar Infamy!</p>
+      <p>
+        Somos um grupo focado em PvE e farm de Infamy, com servidores privados, sorteios regulares e
+        eventos exclusivos. Novos membros são bem-vindos — junte-se ao nosso Discord!
+      </p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Crew Marinheiras Danadas</p>
+    <div class="footer-inner">
+      <p>&copy; 2025 Marinheiras Danadas • Criado por MTPlays</p>
+      <div class="socials">
+        <a href="#" aria-label="Discord" id="discordLink">Discord</a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
